@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <script src="assets/js/main.js" defer></script>
+    <title>Jogo da Memória</title>
+</head>
+<body class="inicial-page">
+    <div class="container__inicial-page">
+        <header class="header__inicial-page">
+            <h1>memory</h1>
+        </header>
+        
+        <main class="menu">
+            <div class="menu__container">
+                <h2 class="menu__title">Selecione o tema</h2>
+                <div class="menu__container__buttons">
+                    <button data-theme="numbers">Números</button>
+                    <button data-theme="icons">Ícones</button>
+                </div>
+            </div>
+            <div class="menu__container">
+                <h2 class="menu__title">Número de Jogadores</h2>
+                <div class="menu__container__buttons">
+                    <button data-players="1">1</button>
+                    <button data-players="2">2</button>
+                    <button data-players="3">3</button>
+                    <button data-players="4">4</button>
+                </div>
+            </div>
+            <div class="menu__container">
+                <h2 class="menu__title">Grade do Jogo</h2>
+                <div class="menu__container__buttons">
+                    <button data-grid="4x4">4x4</button>
+                    <button data-grid="6x6">6x6</button>
+                </div>
+            </div>
+            <button class="menu__start-game" id="start-game">Iniciar Jogo</button>
+        </main>
+    </div>
+
+    <div class="container__game-page">
+        <header class="header__game-page">
+            <h1 class="header__title">memory</h1>
+            <button class="header__menu" id="btnMenu">Menu</button>
+        </header>
+        <div class="modal__container" id="containerModalMenu">
+            <div class="modal">
+                <button class="modal__btn-restart" data-button="restart">Reiniciar</button>
+                <button class="modal__btn-newGame" data-button="newGame">Novo Jogo</button>
+                <button class="modal__btn-continueGame" data-button="continueGame">Continuar</button>
+            </div>
+        </div>
+        <div class="modal__container" id="containerModalGameSolo">
+            <div class="modal">
+                <h2 class="modal__title">Você conseguiu!</h2>
+                <p class="modal__subtitle">Game Over. Aqui estão seus resultados:</p>
+                <div class="modal__time">
+                    <p>Tempo</p>
+                    <p id="finalTime"></p>
+                </div>
+                <div class="modal__amountOfPlays">
+                    <p>Jogadas</p>
+                    <p id="finalMoves"></p>
+                </div>
+                <button class="modal__btn-restart" data-button="restart">Reiniciar</button>
+                <button class="modal__btn-newGame" data-button="newGame">Novo Jogo</button>
+            </div>
+        </div>
+        <div class="modal__container" id="containerModalMultiPlayersGame">
+            <div class="modal">
+                <h2 class="modal__title" id="resultTitle"></h2>
+                <p class="modal__subtitle">Game Over. Aqui estão os resultados:</p>
+                <div class="modal__players" id="playerOne"></div>
+                <div class="modal__players" id="playerTwo"></div>
+                <div class="modal__players" id="playerThree"></div>
+                <div class="modal__players" id="playerFour"></div>
+                <button class="modal__btn-restart" data-button="restart">Reiniciar</button>
+                <button class="modal__btn-newGame" data-button="newGame">Novo Jogo</button>
+            </div>
+        </div>
+        <div class="cards__container"></div>
+        <footer class="footer__container">
+            <div class="timer-and-moves__container">
+                <p class="timer-and-moves__title">Tempo</p>
+                <p class="timer-and-moves__content" id="time"></p>
+            </div>
+            <div class="timer-and-moves__container">
+                <p class="timer-and-moves__title">Jogadas</p>
+                <p class="timer-and-moves__content" id="amountOfPlays">0</p>
+            </div>
+        </footer>        
+    </div>
+</body>
+</html>

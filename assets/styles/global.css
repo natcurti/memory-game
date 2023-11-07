@@ -1,0 +1,25 @@
+@import url(reset.css);
+@import url(inicialPage.css);
+@import url(game.css);
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+:root{
+    --yellow: #FDA214;
+    --yellow-hover: #FFB84A;
+    --dark: #152938;
+    --light-blue: #6395B8;
+    --white: #FCFCFC;
+    --darkest-gray: #304859;
+    --medium-gray: #7191A5;
+    --light-gray: #BCCED9;    
+    --lightest-gray: #F2F2F2; 
+    --font: 'Atkinson Hyperlegible', sans-serif;
+}
+
+body{
+    font-family: var(--font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

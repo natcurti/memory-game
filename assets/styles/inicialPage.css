@@ -1,0 +1,91 @@
+/* Background Body */
+
+.inicial-page{
+    background-color: var(--dark);
+}
+
+/* Header */
+
+.header__inicial-page{
+    color: var(--white);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 5rem 0 3rem 0;
+}
+
+.header__inicial-page h1{
+    text-align: center;
+}
+
+/* Menu */
+
+.menu{
+    background-color: var(--white);
+    border-radius: 0.625rem;
+    width: 90vw;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__title{
+    color: var(--medium-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+}
+
+.menu__container{
+    width: 100%;
+}
+
+.menu__container__buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.685rem;
+    margin-bottom: 1.25rem;
+}
+
+.menu__container__buttons button, .menu__start-game{
+    border-radius: 1.625rem;
+    border: none;
+    font-family: var(--font);
+    font-weight: 700;
+    color: var(--white);
+    transition: background 0.5s linear;
+}
+
+.menu__container__buttons button{
+    flex: 1;
+    height: 2.5rem;
+    background-color: var(--light-gray);
+    font-size: 1rem;
+}
+
+.menu__container__buttons button:hover{
+    cursor: pointer;
+    background-color: var(--light-blue);
+}
+
+.menu__container__buttons button.active{
+    background-color: var(--darkest-gray);
+}
+
+.menu__start-game{
+    background-color: var(--yellow);
+    font-size: 1.125rem;
+    height: 3rem;
+}
+
+.menu__start-game:hover{
+    cursor: pointer;
+    background-color: var(--yellow-hover);
+}
+
+@media (min-width: 768px){
+    .menu{
+        max-width: 44rem;
+    }
+}
