@@ -181,6 +181,10 @@ const icons = [
 chooseTypeOfGame();
 
 function chooseTypeOfGame(){
+    btnTheme.forEach(button => button.classList.remove('active'));
+    btnPlayers.forEach(button => button.classList.remove('active'));
+    btnGrid.forEach(button => button.classList.remove('active'));
+
     btnTheme.forEach(button => button.addEventListener('click', chooseTheme));
     btnPlayers.forEach(button => button.addEventListener('click', choosePlayers));
     btnGrid.forEach(button => button.addEventListener('click', chooseGrid));
